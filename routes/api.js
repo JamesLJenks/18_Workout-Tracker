@@ -33,7 +33,7 @@ router.get("/api/workout", (req, res) => {
     });
 });
 
-router.put("/api/workout:id", ({ body, params }, res) => {
+router.put("/api/workout/:id", ({ body, params }, res) => {
   Workout.findByIdAndUpdate(params.id, { $push: { exercises: body } })
     .then((dbWorkout) => {
       res.json(dbWorkout);
