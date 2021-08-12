@@ -11,14 +11,18 @@ const workoutSchema = new Schema({
 
         duration: {type: Number, required: 'Please enter a duration.'},
 
-        weigth: {type: Number, required: 'Please enter a weight.'},
+        weight: Number,
 
-        reps: {type: Number, required: 'Please enter the number of reps.'},
+        reps: Number,
 
-        sets: {type: Number, required: 'Please enter the number of sets.'}
+        sets: Number,
+
+        distance: Number
 
     }]
 });
 
 const Workout = mongoose.model('Workout', workoutSchema);
 module.exports = Workout;
+
+// Reseed
